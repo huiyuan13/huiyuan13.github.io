@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
     <title>出校</title>
     <style  type="text/css">
         *{
@@ -12,6 +13,8 @@
         .showTime1,.showTime2{
             color: red;
             font-size: 35px;
+            font-family: "Noto Sans SC";
+            font-weight: 400;
         }
         h1{
             font-size: 35px;
@@ -21,32 +24,53 @@
         .margin{
             height: 20px;
         }
+        .kong1{
+            height: 8px;
+        }
+        .kong2{
+            height: 5px;
+        }
+        .kong3{
+            height: 3px;
+        }
+        hr{
+            background-color: rgb(209, 209, 214);
+            border-top: solid rgb(209, 209, 214);
+            border-left:none;
+            border-right:none;
+            border-bottom:none;
+        }
     </style>
 <body>
+    <div class="kong1"></div>
     <h1 id="chuxiao1"></h1>
     <h1 id="jinxiao1"></h1>
     <br>
-    <img src="img\zjf.jpg">
+    <div class="kong2"></div>
+    <img src="img\zjf.jpg">                                <!-- 照片更改 -->
     <br>
-    <h id="name1">郑俊锋-202035020247</h>
-    <hr>
+    <h id="name1">郑俊锋-202035020247</h>                   <!-- 名字学号更改 -->
+    <hr   id="jinchu">
     <div class="margin"></div>
     <h1 id="chuxiao2"></h1>
     <h1 id="jinxiao2"></h1>
+    <div class="kong1"></div>
     <!-- <div class="showTime1">9月19-20时35分16秒</div> -->
     <div class="showTime2">9月19-20时35分16秒</div>
     <div class="margin"></div>
-    <img src="img\1.jpg" width="120" height="120">
+    <img src="img\1.jpg" width="100" height="100">
 </body>
 <script>
     a = confirm( "出校吗?" ); //在页面上弹出对话框,判断进出校
     if (a == true ){
         chuxiao1.innerHTML=('出校')
-        chuxiao2.innerHTML=('学生:白名单验证通过，<br>该申请离校扫码1次，离<br>校码只能使用一次，请不<br>要重复打开')
+        chuxiao2.innerHTML=('学生:白名单验证通过，该申请离校扫码1次，离校码只能使用一次，请不要重复打开')
+        document.getElementById('jinchu').style.width="95%"
     }else{
         document.getElementsByTagName("title")[0].innerText = '进校';
         jinxiao1.innerHTML=('进校')
-        jinxiao2.innerHTML=('白<br>名单验证通过')
+        document.getElementById('jinchu').style.width="60%"
+        jinxiao2.innerHTML=('白名单验证通过')
     } 
 
 
