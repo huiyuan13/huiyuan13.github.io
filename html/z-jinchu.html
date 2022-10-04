@@ -17,14 +17,15 @@
             font-weight: 400;
         }
         h1{
-            font-size: 35px;
+            font-size: 37px;
             font-weight:normal;
             display:inline;
             font-family: "Noto Sans SC";
             font-weight: 400;
         }
         .margin{
-            height: 30px;
+            height: 22px;  
+            /* height: 30px;    35*/
         }
         .kong1{
             height: 10px;
@@ -71,7 +72,7 @@
     a = confirm( "出校吗?" ); //在页面上弹出对话框,判断进出校
     if (a == true ){
         chuxiao1.innerHTML=('出校')
-        chuxiao2.innerHTML=('学生:白名单验证通过,该<br>申请离校扫码1次,离校<br>码只能使用一次,请不要<br>重复打开')
+        chuxiao2.innerHTML=('学生:白名单验证通过,该申请离校扫码1次,离校码只能使用一次,请不要重复打开')
         document.getElementById('jinchu').style.width="95%"
     }else{
         document.getElementsByTagName("title")[0].innerText = '进校';
